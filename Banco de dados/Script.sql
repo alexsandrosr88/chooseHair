@@ -31,7 +31,7 @@ CREATE TABLE cabeleireiro (
 );
 
 CREATE TABLE cabelo (
-    id_cabs Integer AUTO_INCREMENT PRIMARY KEY,
+    id_cab Integer AUTO_INCREMENT PRIMARY KEY,
     descricao varchar(50),
     foto longblob,
     tamanho varchar(10)
@@ -49,8 +49,8 @@ CREATE TABLE agendamento (
 );
 
 CREATE TABLE cabelo_profi (
-    fk_id_cabes_cab_pro integer,
-    fk_id_cabs_cab_pro integer,
-    FOREIGN KEY (fk_id_cabes_cab_pro) REFERENCES cabeleireiro (id_cabe),
-	FOREIGN KEY (fk_id_cabs_cab_pro) REFERENCES cabelo (id_cabs)
+    fk_id_cab_pro integer,
+    fk_id_cabe_cab_pro integer,
+    FOREIGN KEY (fk_id_cab_pro) REFERENCES cabelo (id_cab),
+	FOREIGN KEY (fk_id_cabe_cab_pro) REFERENCES cabeleireiro (id_cabe)
 );
