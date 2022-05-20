@@ -17,7 +17,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "agendamento")
-public class agendamento implements Serializable {
+public class Agendamento implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -34,10 +34,10 @@ public class agendamento implements Serializable {
 	@Column(name = "confirmado", nullable = true)
 	private Boolean confirmado;
 
-	public agendamento() {
+	public Agendamento() {
 	}
 
-	public agendamento(Integer id_agen, LocalTime horario, LocalDate dt_agendada, Boolean confirmado) {
+	public Agendamento(Integer id_agen, LocalTime horario, LocalDate dt_agendada, Boolean confirmado) {
 		this.id_agen = id_agen;
 		this.horario = horario;
 		this.dt_agendada = dt_agendada;
@@ -91,7 +91,7 @@ public class agendamento implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		agendamento other = (agendamento) obj;
+		Agendamento other = (Agendamento) obj;
 		return Objects.equals(id_agen, other.id_agen);
 	}
 }
