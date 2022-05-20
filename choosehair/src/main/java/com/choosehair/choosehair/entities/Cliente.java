@@ -11,13 +11,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Cliente")
+@Table(name = "cliente")
 public class Cliente implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "id_cli")
 	private Integer id_cli;
 	
 	@Column(name = "nome", nullable = true)

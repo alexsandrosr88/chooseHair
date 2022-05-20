@@ -22,6 +22,7 @@ public class Agendamento implements Serializable {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_agen")
 	private Integer id_agen;
 	
 	@Column(nullable = true)
