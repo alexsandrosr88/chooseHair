@@ -23,13 +23,13 @@ public class Cliente implements Serializable {
 	@Column(name = "nome", nullable = true)
 	private String nome;
 	
-	@Column(name = "nome", nullable = true)
+	@Column(name = "cpf", nullable = true)
 	private String cpf;
 	
-	@Column(name = "nome", nullable = true)
+	@Column(name = "email", nullable = true)
 	private String email;
 	
-	@Column(name = "nome", nullable = true)
+	@Column(name = "senha", nullable = true)
 	private String senha;
 
 
