@@ -4,27 +4,32 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-
+@Entity
+@Table(name = "Cliente")
 public class Cliente implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private Integer id;
+	private Integer id_cli;
 	
+	@Column(name = "nome", nullable = true)
 	private String nome;
 	
+	@Column(name = "nome", nullable = true)
 	private String cpf;
 	
-	
+	@Column(name = "nome", nullable = true)
 	private String email;
 	
-	
+	@Column(name = "nome", nullable = true)
 	private String senha;
 
 
@@ -33,7 +38,7 @@ public class Cliente implements Serializable {
 
 
 	public Cliente(Integer id, String nome, String cpf, String email, String senha) {
-		this.id = id;
+		this.id_cli = id;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.email = email;
@@ -42,12 +47,17 @@ public class Cliente implements Serializable {
 
 
 	public Integer getId() {
-		return id;
+		return id_cli;
 	}
 
 
-	public void setId(Integer id) {
-		this.id = id;
+	public Integer getId_cli() {
+		return id_cli;
+	}
+
+
+	public void setId_cli(Integer id_cli) {
+		this.id_cli = id_cli;
 	}
 
 
@@ -93,7 +103,7 @@ public class Cliente implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(id_cli);
 	}
 
 
@@ -106,6 +116,6 @@ public class Cliente implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Cliente other = (Cliente) obj;
-		return Objects.equals(id, other.id);
+		return Objects.equals(id_cli, other.id_cli);
 	}
 }
