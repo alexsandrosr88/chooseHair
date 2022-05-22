@@ -25,7 +25,7 @@ public class Cabelo implements Serializable{
 	private String descricao;
 	
 	@Lob
-	@Column(columnDefinition = "LONGBLOB")
+	@Column(name = "foto", nullable = true)
 	private String foto;
 	
 	@Column(name = "tamanho", nullable = true)

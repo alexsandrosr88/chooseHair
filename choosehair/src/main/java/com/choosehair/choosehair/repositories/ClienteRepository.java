@@ -7,5 +7,6 @@ import com.choosehair.choosehair.entities.Cliente;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
+	
 
 }

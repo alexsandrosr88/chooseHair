@@ -27,7 +27,7 @@ public class Cabeleireiro implements Serializable {
 	private Integer id_cabe;
 	
 	@Lob
-	@Column(columnDefinition = "LONGBLOB")
+	@Column(name = "foto", nullable = true)
 	private String foto;
 	
 	@Column(name = "nome", nullable = true)
