@@ -7,10 +7,15 @@ INSERT INTO CABELEIREIRO(NOME,CPF,EMAIL,SENHA,LOGRADOURO,NUMERO,BAIRRO,CIDADE,TE
 INSERT INTO CABELEIREIRO(NOME,CPF,EMAIL,SENHA,LOGRADOURO,NUMERO,BAIRRO,CIDADE,TELEFONE)VALUES('Pietro Jorge Henry Caldeira','111.567.658-03','pietro@cabeleireiro.com','123456','Rua da Contagem', 920,'Vila da Saúde','São Paulo','(11) 98669-3927');
 INSERT INTO CABELEIREIRO(NOME,CPF,EMAIL,SENHA,LOGRADOURO,NUMERO,BAIRRO,CIDADE,TELEFONE)VALUES('Antonio Victor Kevin Baptista','872.923.798-00','antonio@cabeleireiro.com','123456','Rua Thomás Eftathiou', 511,'Jardim Paulo Afonso','São Paulo','(11) 98386-7449');
 
-INSERT INTO CABELO(descricao,tamanho) VALUES('Curto1','Curto');
-INSERT INTO CABELO(descricao,tamanho) VALUES('Curto2','Curto');
-INSERT INTO CABELO(descricao,tamanho) VALUES('Curto3','Curto');
-INSERT INTO CABELO(descricao,tamanho) VALUES('Curto4','Curto');
+INSERT INTO CABELO(descricao,genero,tamanho) VALUES('Curto1','Masculino','Curto');
+INSERT INTO CABELO(descricao,genero,tamanho) VALUES('Curto2','Masculino','Curto');
+INSERT INTO CABELO(descricao,genero,tamanho) VALUES('Curto3','Masculino','Curto');
+INSERT INTO CABELO(descricao,genero,tamanho) VALUES('Curto4','Masculino','Curto');
+
+INSERT INTO CABELO(descricao,genero,tamanho) VALUES('Curto1','Feminino','Curto');
+INSERT INTO CABELO(descricao,genero,tamanho) VALUES('Curto2','Feminino','Curto');
+INSERT INTO CABELO(descricao,genero,tamanho) VALUES('Curto3','Feminino','Curto');
+INSERT INTO CABELO(descricao,genero,tamanho) VALUES('Curto4','Feminino','Curto');
 
 INSERT INTO CABELO_PROFI(fk_id_cab_pro,fk_id_cabe_cab_pro) VALUES(1,1);
 INSERT INTO CABELO_PROFI(fk_id_cab_pro,fk_id_cabe_cab_pro) VALUES(1,2);

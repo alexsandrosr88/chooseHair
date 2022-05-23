@@ -24,7 +24,10 @@ public class Cabelo implements Serializable{
 	@Column(name = "descricao", nullable = true)
 	private String descricao;
 	
-	@Lob
+	
+	@Column(name = "genero", nullable = true)
+	private String genero;
+	
 	@Column(name = "foto", nullable = true)
 	private String foto;
 	
@@ -33,6 +36,16 @@ public class Cabelo implements Serializable{
 
 	public Cabelo() {
 	}
+	
+
+	public Cabelo(Integer id_cab, String descricao, String genero, String foto, String tamanho) {
+		this.id_cab = id_cab;
+		this.descricao = descricao;
+		this.genero = genero;
+		this.foto = foto;
+		this.tamanho = tamanho;
+	}
+
 
 	public Integer getId_cab() {
 		return id_cab;
@@ -64,6 +77,14 @@ public class Cabelo implements Serializable{
 
 	public void setTamanho(String tamanho) {
 		this.tamanho = tamanho;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
 	}
 
 	@Override
