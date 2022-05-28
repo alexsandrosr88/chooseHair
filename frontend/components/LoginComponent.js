@@ -13,9 +13,6 @@ const LoginComponent = ({ navigation }) => {
       if(email.includes('@gmail.com') && senha!=''){
         alert("Bem-Vindo ao Choose Hair")
         navigation.navigate('Mapa');
-      } else if(email.includes('@hotmail.com') && senha!='') {
-        alert("Bem-Vindo ao Choose Hair")
-        navigation.navigate('Mapa');
       }else{
         alert("Preencha os Dados")
         setEmail('')
