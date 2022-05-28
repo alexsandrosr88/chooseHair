@@ -7,9 +7,7 @@ import {
   StatusBar,
   Image,
   Picker,
-  TextInput,
-  ScrollView,
-  Dimensions,
+  TextInput
 } from 'react-native';
 import Constants from 'expo-constants';
 import AppLoading from 'expo-app-loading';
@@ -26,8 +24,6 @@ import {
 import { Card } from 'react-native-paper';
 
 import Picture from '../assets/barbeariaLemes2.png';
-
-const { width } = Dimensions.get('window');
 
 const ScheduleComponent = ({ navigation }) => {
   return (
