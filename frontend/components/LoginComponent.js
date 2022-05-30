@@ -3,21 +3,40 @@ import React, { useState } from 'react';
 import { Text, View, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import logo from '../assets/logo.png'
+import * as firebase from 'firebase'//4.3.0
+
+var firebaseConfig = {
+    apiKey: "AIzaSyBGCQeB3imDveQb6R5YGM8zDPPmvHP3Vzk",
+    authDomain: "choosehair-5c8ff.firebaseapp.com",
+    projectId: "choosehair-5c8ff",
+    storageBucket: "choosehair-5c8ff.appspot.com",
+    messagingSenderId: "643446226811",
+    appId: "1:643446226811:web:55ff517c6b40402a9d47de",
+    measurementId: "G-2SG56G3GM3"
+  };
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
 
 const LoginComponent = ({ navigation }) => {
     const [isChecked, setChecked] = useState(false);
-    const [email, setEmail] = useState("");
-    const [senha, setSenha] = useState("");
+    const [email, setEmail] = useState("");//Email:teste@gmail.com
+    const [senha, setSenha] = useState("");//senha:123456
+    
     function autentica(){
-      
-      if(email.includes('@gmail.com') && senha!=''){
+      firebase.auth().signInWithEmailAndPassword(email,senha)
+      .then(()=>{
+        console.log('Email Logado:'+ email);
+        console.log('Senha Logado:'+ senha); 
         alert("Bem-Vindo ao Choose Hair")
         navigation.navigate('Mapa');
-      }else{
+        })
+      .catch(error=>{
+        console.error(error);
         alert("Preencha os Dados")
         setEmail('')
         setSenha('')
-      }
+      })
     }
   return (
     <View style={styles.login_container}>
