@@ -23,7 +23,9 @@ import FeatherIcons from 'react-native-vector-icons/Feather';
           <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('Confirma2')}>
           <Text>Sim</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button}><Text>Não</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('Agendamento')}>
+           <Text>Não</Text>
+          </TouchableOpacity>
         </View>
        </View>
     </View>
