@@ -17,5 +17,5 @@ Passo a Passo
 7)Localize o arquivo "App.js" e clique com o direito do mouse em editar e copie todo o conteúdo.
 8)No Slack cole o todo conteúdo copiado na instrução anterior no arquivo "App.js".
 9)Reinicie o navegador.
-10)Ricialize a aplicação com o Emulador do iOS,(Android e Web não correspondem corretamente)
+10)Reinicialize a aplicação com o Emulador do iOS,(Android e Web não correspondem corretamente)
 11)Use o usuário: teste@gmail.com e a senha: 123456
